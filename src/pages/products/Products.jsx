@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 const Products = () => {
   const [getProduct, setProduct] = useState();
   useEffect(() => {
-    axios.get("http://localhost:3000/products").then((res) => {
-      setProduct(res.data);
-      console.log(res.data);
-    });
+    axios
+      .get("https://687014bd7ca4d06b34b5ee6d.mockapi.io/fonte-api/products")
+      .then((res) => {
+        setProduct(res.data);
+        console.log(res.data);
+      });
   }, []);
   return (
     <>

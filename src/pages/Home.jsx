@@ -6,7 +6,9 @@ import axios from "axios";
 const Home = () => {
   const [blog, setBlog] = useState();
   useEffect(() => {
-    axios.get("http://localhost:3000/posts").then((res) => setBlog(res.data));
+    axios
+      .get("https://687014bd7ca4d06b34b5ee6d.mockapi.io/fonte-api/posts")
+      .then((res) => setBlog(res.data));
   }, []);
   return (
     <>

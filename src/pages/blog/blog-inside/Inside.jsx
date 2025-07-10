@@ -6,14 +6,18 @@ export const Inside = () => {
   const [post, setPost] = useState();
   const [restPosts, setRest] = useState();
   useEffect(() => {
-    axios.get("http://localhost:3000/posts").then((res) => {
-      const restPosts = res.data.filter((item) => item.id != id);
-      setRest(restPosts);
-    });
-    axios.get("http://localhost:3000/posts").then((res) => {
-      const foundPost = res.data.find((item) => item.id == id);
-      setPost(foundPost);
-    });
+    axios
+      .get("https://687014bd7ca4d06b34b5ee6d.mockapi.io/fonte-api/posts")
+      .then((res) => {
+        const restPosts = res.data.filter((item) => item.id != id);
+        setRest(restPosts);
+      });
+    axios
+      .get("https://687014bd7ca4d06b34b5ee6d.mockapi.io/fonte-api/posts")
+      .then((res) => {
+        const foundPost = res.data.find((item) => item.id == id);
+        setPost(foundPost);
+      });
   }, [id]);
   if (!post) {
     return (

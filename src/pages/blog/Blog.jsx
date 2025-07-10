@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Blog = () => {
   const [getNews, setNews] = useState();
-  const apiLink = "http://localhost:3000/posts";
+  const apiLink = "https://687014bd7ca4d06b34b5ee6d.mockapi.io/fonte-api/posts";
   useEffect(() => {
     const getData = async () => {
       const res = await axios.get(apiLink);

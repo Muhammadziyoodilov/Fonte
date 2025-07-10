@@ -5,7 +5,7 @@ const Comand = () => {
   const [sponsor, setSponsor] = useState();
   useEffect(() => {
     axios
-      .get("http://localhost:3000/comand")
+      .get("https://6870179f7ca4d06b34b5f537.mockapi.io/fonte/comand")
       .then((res) => setSponsor(res.data));
   }, []);
   return (

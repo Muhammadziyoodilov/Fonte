@@ -7,11 +7,13 @@ const Product = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get("http://localhost:3000/products").then((res) => {
-      const filtered = res.data.find((item) => item.id == id);
-      setProduct(filtered);
-      console.log(filtered);
-    });
+    axios
+      .get("https://687014bd7ca4d06b34b5ee6d.mockapi.io/fonte-api/products")
+      .then((res) => {
+        const filtered = res.data.find((item) => item.id == id);
+        setProduct(filtered);
+        console.log(filtered);
+      });
   }, [id]);
 
   if (!product) return <p>Загрузка...</p>;
