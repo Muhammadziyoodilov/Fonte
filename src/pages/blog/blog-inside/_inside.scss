@@ -1,0 +1,65 @@
+.inside {
+  max-width: 840px;
+  &-link {
+    @include font(600, 16, 1);
+    a {
+      @include font(500, 16, 1);
+      color: $white;
+      transition: all 0.3s;
+    }
+    a:hover {
+      color: $pr-color;
+    }
+  }
+  &-title {
+    @include font(700, 32, 1);
+    max-width: 648px;
+  }
+  &-date {
+    font-family: "Gogh";
+    @include font(500, 20, 1);
+  }
+  &-image {
+    height: 300px;
+    width: 100%;
+  }
+  &-info {
+    @include font(400, 18, 1);
+  }
+  &-bottom-link {
+    font-family: "Gilroy";
+    @include font(600, 12, 1);
+    color: $pr-color;
+  }
+}
+.inside-bottom-title {
+  @include font(700, 24, 1);
+}
+.inside-bottom-name {
+  @include font(700, 20, 1);
+  max-width: 400px;
+}
+@include media(590px) {
+  .inside {
+    &-info {
+      font-family: "Gogh";
+      @include font(400, 16, 1);
+    }
+    &-title {
+      font-family: "Gogh";
+      @include font(700, 24, 1);
+    }
+    &-bottom-title {
+      font-family: "Gogh";
+    }
+    &-bottom-name {
+      font-family: "Gogh";
+    }
+  }
+}
+@include media(509px) {
+  .inside-bottom {
+    flex-direction: column;
+    gap: 50px;
+  }
+}

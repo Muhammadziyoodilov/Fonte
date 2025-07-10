@@ -1,0 +1,45 @@
+.link {
+  font-family: "Gilroy";
+  color: $pr-color;
+  @include font(600, 12, 1);
+}
+.home-name {
+  @include font(700, 20, 1);
+}
+@include media(455px) {
+  .home-img {
+    max-width: 100%;
+    height: auto;
+  }
+  .home-title {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.senn {
+  &-container {
+    max-width: 1118px;
+  }
+  &-title {
+    @include font(600, 24, 1);
+  }
+  &-info {
+    @include font(400, 14, 1.4);
+    color: rgba(255, 255, 255, 0.651);
+  }
+}
+@include media(900px) {
+  .senn {
+    &-content {
+      flex-wrap: wrap;
+      justify-content: start;
+    }
+  }
+}
+@include media(420px) {
+  .senn {
+    &-wrp {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.footer {
+  &-bottom {
+    &-title {
+      @include font(500, 16, 1);
+    }
+  }
+  &-info {
+    @include font(400, 12, 1);
+    color: #6c6c6c;
+  }
+  &-mid {
+    a {
+      @include font(500, 14, 1);
+      color: #8a8a8a;
+      transition: all 0.3s;
+    }
+    a:hover {
+      color: $pr-color;
+    }
+  }
+  &-right {
+    max-width: 859px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@include media(648px) {
+  .footer-right {
+    flex-direction: column-reverse;
+    align-items: end;
+  }
+}
+@include media(404px) {
+  .footer-mid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-right {
+    align-items: start;
+  }
+}

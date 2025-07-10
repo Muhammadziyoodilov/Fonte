@@ -1,0 +1,41 @@
+.blog {
+  &-container {
+    max-width: 840px;
+  }
+  &-card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 366px;
+    width: 100%;
+    a {
+      @include font(500, 12, 1);
+      font-family: "Gogh";
+      color: $pr-color;
+    }
+  }
+  &-name {
+    @include font(500, 12, 1);
+  }
+  &-title {
+    @include font(700, 20, 1);
+  }
+  &-info {
+    @include font(400, 12, 1);
+  }
+}
+@include media(820px) {
+  .blog-card {
+    gap: 30px;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}

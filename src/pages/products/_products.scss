@@ -1,0 +1,71 @@
+.products {
+  &-card {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  &-card:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../../../public/images/png/products/1.png);
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1);
+    z-index: -1;
+    transition: all 0.3s;
+  }
+  &-card:hover::before {
+    filter: none;
+  }
+  &-card:hover {
+    a {
+      box-shadow: none;
+      background-color: $pr-color;
+    }
+  }
+  &-container {
+    max-width: 1040px;
+    a {
+      color: $white;
+      padding: 11px 39px;
+      background-color: #ff660066;
+      border: 1px solid #ff6600;
+      font-family: "Gogh";
+      @include font(500, 14, 1);
+      box-shadow: 0px 0px 40px 0px #ff660040;
+      transition: all 0.3s;
+    }
+    a:hover {
+      box-shadow: none;
+      background-color: $pr-color;
+    }
+  }
+  &-title {
+    @include font(600, 24, 1);
+  }
+  &-info {
+    @include font(400, 16, 1.4);
+    max-width: 550px;
+  }
+}
+.products-cards {
+  :nth-child(2):before {
+    background-image: url(../../../public/images/png/products/2.png);
+  }
+  :nth-child(3):before {
+    background-image: url(../../../public/images/png/products/3.png);
+  }
+  :nth-child(4):before {
+    background-image: url(../../../public/images/png/products/4.png);
+  }
+  :nth-child(5):before {
+    background-image: url(../../../public/images/png/products/5.png);
+  }
+}
+@include media(478px) {
+  .products-card {
+    padding-bottom: 100px;
+  }
+}

@@ -1,0 +1,63 @@
+.comand {
+  position: relative;
+  overflow-x: hidden;
+  &-link {
+    @include font(500, 28, 1);
+    color: rgba(255, 255, 255, 0.705);
+    transition: all 0.3s;
+  }
+  &-link:hover {
+    color: $pr-color;
+  }
+  &-container {
+    max-width: 1110px;
+  }
+  &-line {
+    position: absolute;
+    bottom: 15px;
+    right: 80px;
+  }
+  &-line-2 {
+    position: absolute;
+    transform: rotate(180deg);
+    top: -10px;
+    left: 650px;
+  }
+  &-info {
+    @include font(400, 16, 1.4);
+    color: rgba(255, 255, 255, 0.705);
+  }
+  &-sponsor {
+    img {
+      width: 150px;
+      height: 150px;
+      filter: grayscale(1);
+      transition: all 0.3s;
+    }
+    img:hover {
+      filter: none;
+    }
+    &-name {
+      @include font(600, 16, 1);
+      max-width: 130px;
+    }
+  }
+}
+@include media(500px) {
+  .comand {
+    &-link {
+      @include font(500, 20, 1);
+    }
+  }
+}
+@include media(375px) {
+  .comand {
+    &-link {
+      @include font(500, 16, 1);
+    }
+  }
+  .partners {
+    max-width: 100%;
+    height: auto;
+  }
+}

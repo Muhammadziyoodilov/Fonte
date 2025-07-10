@@ -1,0 +1,21 @@
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(../../../public/images/png/products/1.png);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: grayscale(1);
+}
+.hero {
+  &-info {
+    @include font(500, 20, 1);
+  }
+}
+@include media(500px) {
+  .hero-info {
+    @include font(500, 14, 1.4);
+    font-family: "Gogh";
+  }
+}

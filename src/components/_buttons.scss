@@ -1,0 +1,31 @@
+button {
+  border: none;
+  background: none;
+  color: $white;
+  cursor: pointer;
+  @include font(500, 14, 1);
+}
+.btn {
+  box-shadow: 0px 0px 50px 0px #ff66004d;
+  border: 1px $pr-color solid;
+  background-color: #ff66004d;
+  padding: 11px 35px 12px 39px;
+  transition: all 0.3s;
+  color: $white;
+}
+.btn:hover {
+  box-shadow: none;
+  background-color: $pr-color;
+}
+.btn2 {
+  box-shadow: 0px 0px 60px 0px #ff660073;
+  border: 1px solid #ff6600;
+  background-color: #ff660066;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  transition: all 0.3s;
+}
+.btn2:hover {
+  box-shadow: none;
+  background-color: $pr-color;
+}

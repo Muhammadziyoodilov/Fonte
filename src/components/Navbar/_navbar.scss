@@ -1,0 +1,29 @@
+.lang-link {
+  @include font(500, 14, 1);
+  color: $white;
+}
+.sitenav-link {
+  color: $white;
+  @include font(500, 14, 1);
+}
+
+.active {
+  color: $pr-color;
+}
+.navbar-burger {
+  display: none;
+}
+@include media(833px) {
+  .sitenav {
+    display: none;
+  }
+  .navbar-links-wrp {
+    display: none;
+  }
+  .navbar-burger {
+    display: flex;
+  }
+  .navbar-container {
+    margin-top: 43px;
+  }
+}

@@ -1,0 +1,53 @@
+.about {
+  position: relative;
+  .comand-line {
+    top: 500px;
+    transform: none;
+    right: 80px;
+  }
+  &-container {
+    max-width: 1050px;
+  }
+  &-img {
+    filter: grayscale(1);
+  }
+  &-info {
+    @include font(400, 14, 1.4);
+    max-width: 650px;
+  }
+}
+@include media(790px) {
+  .about {
+    .comand-line {
+      top: 650px;
+    }
+  }
+  .about-wrp {
+    flex-direction: column;
+    .about-img {
+      height: 250px;
+      margin-bottom: 20px;
+    }
+  }
+  .about-right {
+    margin: 0;
+  }
+  .about-info {
+    @include font(400, 12, 1.4);
+    max-width: 100%;
+  }
+}
+@include media(540px) {
+  .about {
+    .comand-line {
+      top: 720px;
+    }
+  }
+}
+@include media(405px) {
+  .about {
+    .comand-line {
+      top: 820px;
+    }
+  }
+}

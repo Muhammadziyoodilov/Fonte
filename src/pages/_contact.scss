@@ -1,0 +1,78 @@
+.contact-container {
+  max-width: 1150px;
+}
+.contact {
+  &-title {
+    @include font(600, 20, 1.4);
+  }
+  &-info {
+    @include font(400, 20, 1.4);
+    max-width: 615px;
+  }
+  &-info-2 {
+    @include font(300, 16, 1.4);
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    gap: 10px;
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    img {
+      cursor: grab;
+      width: 544px;
+      height: 300px;
+    }
+  }
+  &-city {
+    @include font(500, 16, 1);
+  }
+}
+@include media(1152px) {
+  .contact {
+    &-bottom {
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+@include media(420px) {
+  .contact-bottom {
+    img {
+      height: 200px;
+    }
+  }
+}
+@include media(840px) {
+  .contact-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+input {
+  padding: 17px 0px 18px 17px;
+  background-color: #141414;
+  border: none;
+  @include font(500, 12, 1);
+  color: $white;
+  outline: none;
+  transition: all 0.3s;
+  caret-color: #ff6600;
+}
+input:focus {
+  background-color: #ff66001a;
+  box-shadow: 0px 0px 30px 0px #ff660026;
+  border: 1px #ff6600 solid;
+}
+input:hover {
+  box-shadow: 0px 0px 30px 0px #ff660026;
+}
